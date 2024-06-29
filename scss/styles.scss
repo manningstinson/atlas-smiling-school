@@ -59,7 +59,7 @@ html {
 }
 
 .nav-link:hover {
-  color: #964acc !important; /* Text color changes to purple on hover */
+  color: #c271ff !important; /* Text color changes to purple on hover */
 }
 
 .nav-link:hover::after {
@@ -112,7 +112,7 @@ html {
 }
 
 .hero-content .highlight {
-  color: #964acc;
+  color: #c271ff;
 }
 
 .sub-lead {
@@ -123,8 +123,8 @@ html {
 
 .btn-primary {
   color: #fff;
-  background-color: #964acc;
-  border-color: #b847d3;
+  background-color: #c271ff;
+  border-color: #c271ff;
 }
 
 /* Specific styles for courses hero-section */
@@ -135,6 +135,19 @@ html {
 /* Specific styles for full-cover hero-section */
 .hero-section-full-cover {
   height: 100vh; /* Full viewport height */
+}
+
+.search-section {
+  background-color: #c271ff; // Adjust the color to match the screenshot
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.2); // Semi-transparent white
+    color: #fff;
+    border: none;
+    &::placeholder {
+      color: #fff;
+      opacity: 0.8; // Adjust placeholder opacity if needed
+    }
+  }
 }
 
 /* Bootstrap Breakpoints */
