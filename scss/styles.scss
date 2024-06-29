@@ -172,7 +172,7 @@ html {
       height: 40px;
     }
     .author-name {
-      color: #c27ba0;
+      color: #c271ff;
       font-weight: bold;
     }
     .star-rating {
@@ -186,6 +186,9 @@ html {
   }
 }
 
+.text-warning {
+  color: #c271ff !important;
+}
 footer {
   .footer-logo {
     font-size: 1.5rem;
