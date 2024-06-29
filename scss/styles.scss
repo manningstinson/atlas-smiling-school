@@ -186,6 +186,14 @@ html {
   }
 }
 
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding-top: 1.25rem;
+  padding-left: 0;
+}
+
 .text-warning {
   color: #c271ff !important;
 }
@@ -222,8 +230,8 @@ footer {
 }
 
 .custom-footer-padding {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 footer {
@@ -260,6 +268,21 @@ footer {
 
 .bg-dark {
   background-color: #071629 !important;
+}
+
+.purple-star {
+  color: #c271ff; // Color for the purple stars
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    width: 50px; // Adjust size as needed
+    height: auto;
+  }
 }
 
 /* Bootstrap Breakpoints */
