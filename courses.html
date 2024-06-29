@@ -63,23 +63,33 @@
     </div>
 
     <section class="search-section py-3">
-      <div class="container text-center">
+      <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-3 mb-2">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search by keywords"
-            />
+          <div class="col-md-4 mb-2">
+            <label class="search-label text-left">KEYWORDS</label>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Search by keywords"
+              />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="fa fa-search"></i>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3 mb-2">
-            <select class="form-control">
+          <div class="col-md-4 mb-2">
+            <label class="search-label text-left">TOPIC</label>
+            <select class="form-control search-input">
               <option value="novice">Novice</option>
               <!-- Add more options as needed -->
             </select>
           </div>
-          <div class="col-md-3 mb-2">
-            <select class="form-control">
+          <div class="col-md-4 mb-2">
+            <label class="search-label text-left">SORT BY</label>
+            <select class="form-control search-input">
               <option value="most-popular">Most Popular</option>
               <!-- Add more options as needed -->
             </select>
