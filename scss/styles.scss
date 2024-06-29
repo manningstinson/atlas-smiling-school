@@ -21,7 +21,13 @@ html {
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
   margin-left: 20px;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
 }
 
 .navbar-nav {
@@ -32,13 +38,48 @@ html {
 
 .nav-link {
   color: white !important;
+  font-weight: normal;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px; /* Add some padding at the bottom to make space for the underline */
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600; /* Ensure the link's width is taken into account */
 }
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white; /* Underline color */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #964acc !important; /* Text color changes to purple on hover */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Full width of the text */
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+// Common hero-section styles
 .hero-section {
   position: relative;
   color: white;
   text-align: center;
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .hero-background {
@@ -53,21 +94,25 @@ html {
 }
 
 .hero-content {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 1;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
+.hero-section .wrap-quote {
+  font-size: 2rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
+  white-space: normal;
+  word-break: break-word;
+  margin-top: 1.5em;
 }
-
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+
+.hero-content .highlight {
+  color: #964acc;
 }
 
 .sub-lead {
@@ -76,31 +121,20 @@ html {
   color: #fff;
 }
 
-.pro-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.pro-card {
-  text-align: center;
-  color: #fff;
-}
-
-.pro-img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
 .btn-primary {
   color: #fff;
   background-color: #964acc;
   border-color: #b847d3;
+}
+
+/* Specific styles for courses hero-section */
+.hero-section-courses {
+  height: 40vh;
+}
+
+/* Specific styles for full-cover hero-section */
+.hero-section-full-cover {
+  height: 100vh; /* Full viewport height */
 }
 
 /* Bootstrap Breakpoints */
@@ -137,19 +171,8 @@ html {
 
 // Styles for desktop 1440px and up
 @media (min-width: 1440px) {
-  .hero-content h1 {
-    font-size: 4rem;
-  }
-
-  .hero-content p {
-    font-size: 1.8rem;
-  }
-}
-
-// Styles for tablets 768px to 1439.98px
-@media (min-width: 768px) and (max-width: 1439.98px) {
-  .hero-content h1 {
-    font-size: 3.5rem;
+  .wrap-quote {
+    font-size: 3rem;
   }
 
   .hero-content p {
@@ -157,21 +180,32 @@ html {
   }
 }
 
-// Styles for mobile devices less than 768px
-@media (max-width: 767.98px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
+// Styles for tablets 768px to 1439.98px
+@media (min-width: 768px) and (max-width: 1439.98px) {
+  .wrap-quote {
+    font-size: 2.5rem;
   }
 
   .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+  }
+}
+
+// Styles for mobile devices less than 768px
+@media (max-width: 767.98px) {
+  .wrap-quote {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
   }
 }
 
 // Styles for mobile devices less than 375px
 @media (max-width: 374.98px) {
-  .hero-content h1 {
-    font-size: 2rem;
+  .wrap-quote {
+    font-size: 1.5rem;
   }
 
   .hero-content p {
