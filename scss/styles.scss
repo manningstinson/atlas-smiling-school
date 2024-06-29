@@ -149,6 +149,115 @@ html {
     }
   }
 }
+.course-card {
+  border: none;
+  .card-img-top {
+    position: relative;
+    img {
+      border-top-left-radius: calc(0.25rem - 1px);
+      border-top-right-radius: calc(0.25rem - 1px);
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  .card-body {
+    .author-img {
+      width: 40px;
+      height: 40px;
+    }
+    .author-name {
+      color: #c27ba0;
+      font-weight: bold;
+    }
+    .star-rating {
+      .d-inline {
+        font-size: 20px;
+      }
+    }
+    .duration {
+      color: #6c757d;
+    }
+  }
+}
+
+footer {
+  .footer-logo {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    .logo-img {
+      // Adjust size as needed
+      height: auto;
+      margin-right: 8px;
+    }
+  }
+
+  .social-icons {
+    a {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .social-img {
+        width: 24px; // Adjust size as needed
+        height: auto;
+        transition: filter 0.3s;
+        &:hover {
+          filter: brightness(1.2); // Adjust hover effect as needed
+        }
+      }
+    }
+  }
+}
+
+.custom-footer-padding {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+footer {
+  .footer-logo {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    .logo-img {
+      // Adjust size as needed
+      height: auto;
+      margin-right: 8px;
+    }
+  }
+
+  .social-icons {
+    a {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .social-img {
+        width: 24px; // Adjust size as needed
+        height: auto;
+        transition: filter 0.3s;
+        &:hover {
+          filter: brightness(1.2); // Adjust hover effect as needed
+        }
+      }
+    }
+  }
+}
+
+.bg-dark {
+  background-color: #071629 !important;
+}
 
 /* Bootstrap Breakpoints */
 
