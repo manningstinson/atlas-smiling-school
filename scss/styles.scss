@@ -313,6 +313,124 @@ footer {
   }
 }
 
+.faq-section {
+  max-width: 960px;
+  margin: 0 auto; /* Center the section */
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 3em;
+  color: #071629;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 1em;
+}
+.section-body .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1em; /* Add padding between rows */
+}
+
+.section-body .question {
+  max-width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the columns */
+}
+
+.section-body .question h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section-body .question p {
+  font-size: 1em;
+  line-height: 1.75;
+  text-align: justify; /* Justify text */
+  color: #c271ff; /* Bootstrap's text-muted color */
+}
+
+/* Specific styles for columns */
+.row1 .col1 .question,
+.row2 .col1 .question {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.row1 .col2 .question,
+.row2 .col2 .question {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.quotes.section {
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  background-color: #c271ff;
+}
+.carousel-item {
+  padding: 20px 0; /* Padding to add space around the items */
+}
+
+.carousel-item .row {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.carousel-item img {
+  max-width: 100px; /* Adjust the size of the profile images */
+  border-radius: 50%;
+}
+
+.quote-text {
+  padding: 20px;
+  text-align: left;
+}
+
+.quote-text p {
+  font-size: 1.25em;
+  color: #fff; /* White text color */
+  margin-bottom: 10px;
+}
+
+.quote-text h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff; /* White text color */
+}
+
+.quote-text span {
+  font-size: 1em;
+  color: #fff; /* White text color */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust the width of the carousel controls */
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+  width: 30px; /* Adjust the size of the arrow images */
+}
+
+.carousel-control-prev .sr-only,
+.carousel-control-next .sr-only {
+  display: none; /* Hide the screen reader text */
+}
+
+.arrow-left img,
+.arrow-right img {
+  filter: invert(1); /* Invert colors for white arrows */
+}
+
 /* Bootstrap Breakpoints */
 
 /* Extra small devices (portrait phones, less than 576px) */
