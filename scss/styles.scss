@@ -1,4 +1,41 @@
-// Base styles (mobile-first approach)
+/* Import Source Sans Pro */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/source-sans-pro/SourceSansPro-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/source-sans-pro/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Import Spin Cycle OT */
+@font-face {
+  font-family: "Spin Cycle OT";
+  src: url("../fonts/spin-cycle-ot/SpinCycleOT-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the fonts */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Spin Cycle OT", sans-serif;
+}
+
 body,
 html {
   margin: 0;
@@ -7,6 +44,7 @@ html {
   overflow-x: hidden;
 }
 
+/* Navbar styles */
 .navbar.navbar-transparent {
   background-color: transparent !important;
   position: absolute;
@@ -70,15 +108,33 @@ html {
   padding-left: 0rem;
 }
 
-// Common hero-section styles
+/* Hero section styles */
 .hero-section {
   position: relative;
   color: white;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section-courses {
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-background {
@@ -90,6 +146,19 @@ html {
   background-size: cover;
   background-position: center;
   z-index: -1;
+  filter: brightness(100%);
+}
+
+.hero-background-courses {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(100%);
 }
 
 .hero-content {
@@ -97,14 +166,11 @@ html {
   z-index: 1;
 }
 
-.hero-section .wrap-quote {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.hero-content h1 {
+  font-size: 4rem;
   font-weight: bold;
-  white-space: normal;
-  word-break: break-word;
-  margin-top: 1.5em;
 }
+
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -114,117 +180,83 @@ html {
   color: #c271ff;
 }
 
-.sub-lead {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  color: #fff;
-}
-
 .btn-primary {
   color: #fff;
   background-color: #c271ff;
   border-color: #c271ff;
 }
 
-/* Specific styles for courses hero-section */
-.hero-section-courses {
-  height: 40vh;
-}
-
-/* Specific styles for full-cover hero-section */
-.hero-section-full-cover {
-  height: 100vh; /* Full viewport height */
-}
-
-.search-section {
-  background-color: #c271ff; // Adjust the color to match the screenshot
-  .form-control {
-    background-color: rgba(255, 255, 255, 0.2); // Semi-transparent white
-    color: #fff;
-    border: none;
-    height: 51px; // Set the height of the input fields
-    width: 100%; // Set the width to fill the column
-    max-width: 350px; // Set the max width to 350px
-    &::placeholder {
-      color: #fff;
-      opacity: 0.8; // Adjust placeholder opacity if needed
-    }
-  }
-}
-
-.search-label {
-  display: block;
+.learn-section {
+  text-align: center;
+  padding: 20px 0;
   color: #fff;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  text-align: left;
+  width: 100%;
 }
 
-.input-group-text {
-  background-color: transparent;
-  border: none;
-  color: #fff;
+.learn-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.input-group .form-control {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.learn-section p {
+  font-size: 1.5rem;
+  color: #c271ff;
 }
 
-.input-group .input-group-append .input-group-text {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.profile-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.course-card {
-  border: none;
-  .card-img-top {
-    position: relative;
-    img {
-      border-top-left-radius: calc(0.25rem - 1px);
-      border-top-right-radius: calc(0.25rem - 1px);
-    }
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 50px;
-      color: rgba(255, 255, 255, 0.7);
-    }
-  }
-  .card-body {
-    .author-img {
-      width: 40px;
-      height: 40px;
-    }
-    .author-name {
-      color: #c271ff;
-      font-weight: bold;
-    }
-    .star-rating {
-      .d-inline {
-        font-size: 20px;
-      }
-    }
-    .duration {
-      color: #6c757d;
-    }
-  }
+.profile-card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  max-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-body {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 1px;
-  padding-top: 1.25rem;
-  padding-left: 0;
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-.text-warning {
-  color: #c271ff !important;
+.profile-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
+
+.profile-card p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.hero-content .sub-lead {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-content .register-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-content .sub-lead span {
+  color: #c271ff;
+}
+
+.padded-text {
+  padding: 0 10px;
+}
+
+/* Footer styles */
 footer {
   .footer-logo {
     font-size: 1.5rem;
@@ -232,7 +264,6 @@ footer {
     align-items: center;
 
     .logo-img {
-      // Adjust size as needed
       height: auto;
       margin-right: 8px;
     }
@@ -246,11 +277,11 @@ footer {
       }
 
       .social-img {
-        width: 24px; // Adjust size as needed
+        width: 24px; /* Adjust size as needed */
         height: auto;
         transition: filter 0.3s;
         &:hover {
-          filter: brightness(1.2); // Adjust hover effect as needed
+          filter: brightness(1.2); /* Adjust hover effect as needed */
         }
       }
     }
@@ -262,44 +293,13 @@ footer {
   padding-bottom: 7rem;
 }
 
-footer {
-  .footer-logo {
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-
-    .logo-img {
-      // Adjust size as needed
-      height: auto;
-      margin-right: 8px;
-    }
-  }
-
-  .social-icons {
-    a {
-      margin-right: 10px;
-      &:last-child {
-        margin-right: 0;
-      }
-
-      .social-img {
-        width: 24px; // Adjust size as needed
-        height: auto;
-        transition: filter 0.3s;
-        &:hover {
-          filter: brightness(1.2); // Adjust hover effect as needed
-        }
-      }
-    }
-  }
-}
-
+/* Additional Styles */
 .bg-dark {
   background-color: #071629 !important;
 }
 
 .purple-star {
-  color: #c271ff; // Color for the purple stars
+  color: #c271ff; /* Color for the purple stars */
 }
 
 .play-button {
@@ -308,11 +308,12 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   img {
-    width: 50px; // Adjust size as needed
+    width: 50px; /* Adjust size as needed */
     height: auto;
   }
 }
 
+/* FAQ Section Styles */
 .faq-section {
   max-width: 960px;
   margin: 0 auto; /* Center the section */
@@ -329,6 +330,7 @@ footer {
   font-family: "Source Sans Pro", sans-serif;
   margin-top: 1em;
 }
+
 .section-body .row {
   display: flex;
   justify-content: center;
@@ -369,12 +371,14 @@ footer {
   margin-bottom: 1em;
 }
 
+/* Quotes Section Styles */
 .quotes.section {
   display: flex;
   align-items: center;
   padding: 60px 0;
   background-color: #c271ff;
 }
+
 .carousel-item {
   padding: 20px 0; /* Padding to add space around the items */
 }
@@ -431,6 +435,101 @@ footer {
   filter: invert(1); /* Invert colors for white arrows */
 }
 
+/* Search Section Styles */
+.search-section {
+  background-color: #c271ff; /* Adjust the color to match the screenshot */
+}
+
+.search-section .form-control {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  color: #fff;
+  border: none;
+  height: 51px; /* Set the height of the input fields */
+  width: 100%; /* Set the width to fill the column */
+  max-width: 350px; /* Set the max width to 350px */
+}
+
+.search-section .form-control::placeholder {
+  color: #fff;
+  opacity: 0.8; /* Adjust placeholder opacity if needed */
+}
+
+.search-label {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.input-group .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group .input-group-append .input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.course-card {
+  border: none;
+}
+
+.course-card .card-img-top {
+  position: relative;
+}
+
+.course-card .card-img-top img {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.course-card .card-img-top .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.course-card .card-body .author-img {
+  width: 40px;
+  height: 40px;
+}
+
+.course-card .card-body .author-name {
+  color: #c271ff;
+  font-weight: bold;
+}
+
+.course-card .card-body .star-rating .d-inline {
+  font-size: 20px;
+}
+
+.course-card .card-body .duration {
+  color: #6c757d;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding-top: 1.25rem;
+  padding-left: 0;
+}
+
+.text-warning {
+  color: #c271ff !important;
+}
+
 /* Bootstrap Breakpoints */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -463,7 +562,7 @@ footer {
 
 /* Custom breakpoints for 1440px, 768px, and 375px */
 
-// Styles for desktop 1440px and up
+/* Styles for desktop 1440px and up */
 @media (min-width: 1440px) {
   .wrap-quote {
     font-size: 3rem;
@@ -474,7 +573,7 @@ footer {
   }
 }
 
-// Styles for tablets 768px to 1439.98px
+/* Styles for tablets 768px to 1439.98px */
 @media (min-width: 768px) and (max-width: 1439.98px) {
   .wrap-quote {
     font-size: 2.5rem;
@@ -485,7 +584,7 @@ footer {
   }
 }
 
-// Styles for mobile devices less than 768px
+/* Styles for mobile devices less than 768px */
 @media (max-width: 767.98px) {
   .wrap-quote {
     font-size: 2rem;
@@ -496,7 +595,7 @@ footer {
   }
 }
 
-// Styles for mobile devices less than 375px
+/* Styles for mobile devices less than 375px */
 @media (max-width: 374.98px) {
   .wrap-quote {
     font-size: 1.5rem;
