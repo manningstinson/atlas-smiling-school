@@ -36,6 +36,8 @@
 
 /* Search Section  */
 
+/* Search Section  */
+
 .search {
   background-color: var(--main-color);
   height: auto;
@@ -58,9 +60,10 @@
   border-radius: 3px 3px 0px 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.25);
-
   color: var(--color-white);
   font-size: 20px;
+  display: flex;
+  align-items: center; /* Ensure icon is vertically centered */
 }
 
 .search .form-control.search-text-area {
@@ -71,7 +74,6 @@
   background: rgba(255, 255, 255, 0.25);
   mix-blend-mode: normal;
   border-left: 0;
-
   color: var(--color-white);
 }
 
@@ -127,6 +129,12 @@
   color: var(--main-color);
   background-color: white;
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 575px) {
   .search .box1 .input-group {

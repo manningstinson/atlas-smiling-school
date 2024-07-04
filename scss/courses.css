@@ -32,6 +32,7 @@
   }
 }
 /* Search Section  */
+/* Search Section  */
 .search {
   background-color: var(--main-color);
   height: auto;
@@ -56,6 +57,8 @@
   background: rgba(255, 255, 255, 0.25);
   color: var(--color-white);
   font-size: 20px;
+  display: flex;
+  align-items: center; /* Ensure icon is vertically centered */
 }
 
 .search .form-control.search-text-area {
