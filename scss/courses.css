@@ -1,4 +1,4 @@
-/* Courses Section  */
+/* Courses Section */
 .courses-header .navbar-nav li:nth-child(1) a {
   color: var(--main-color) !important;
 }
@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-/* Header Section  */
+/* Header Section */
 .courses-header {
   background-size: cover;
   background-position-y: -100px;
@@ -31,8 +31,7 @@
     background-position-y: -100px;
   }
 }
-/* Search Section  */
-/* Search Section  */
+/* Search Section */
 .search {
   background-color: var(--main-color);
   height: auto;
@@ -59,6 +58,8 @@
   font-size: 20px;
   display: flex;
   align-items: center; /* Ensure icon is vertically centered */
+  height: 48px; /* Explicitly set height */
+  line-height: 48px; /* Align icon vertically */
 }
 
 .search .form-control.search-text-area {
@@ -135,7 +136,7 @@
     margin-bottom: 19px;
   }
 }
-/* Results Section  */
+/* Results Section */
 .results .section-title {
   font-size: 16px;
   line-height: 20px;
