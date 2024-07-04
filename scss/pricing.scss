@@ -28,6 +28,7 @@
 .pricing-header .hero .smile-fig {
   max-width: 37px;
 }
+
 .pricing-header .title-fig {
   width: 200px;
 }
@@ -36,9 +37,11 @@
   .pricing-header h1 {
     font-size: 24px;
   }
+
   .pricing-header .hero .smile-fig {
     max-width: 30px;
   }
+
   .pricing-header .title-fig {
     width: 150px;
   }
@@ -77,7 +80,7 @@
 
 .prices-grid .check-icon {
   font-size: 28px;
-  color: var(--check-color);
+  color: #28a745; /* Green color for checkmarks */
 }
 
 .prices-grid .signal-logo {
@@ -108,19 +111,71 @@
   .prices-grid .table {
     table-layout: initial;
   }
+
   .prices-grid .pricing-table-title-1,
   .prices-grid .pricing-table-title-2 {
     font-size: 12px;
     padding: 0;
     padding-bottom: 30px;
   }
+
   .prices-grid .prices-col-1 {
     padding-right: 30px;
   }
+
   .prices-grid .prices-col-2 {
     padding-right: 50px;
   }
+
   .prices-grid .pricing-table-title-1 {
     padding-right: 36px;
+  }
+}
+
+/* FAQ SECTION */
+
+.faq.section {
+  padding: 60px 0;
+}
+
+.faq .section-header {
+  margin-bottom: 40px;
+}
+
+.faq .section-body .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.faq .question {
+  background-color: #fff; /* Background color for the question boxes */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow for better visual */
+}
+
+.faq .question h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.faq .question p {
+  font-size: 1rem;
+  color: #6c757d; /* Text color for the content */
+  margin-bottom: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 767.98px) {
+  .faq .question {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .faq .question {
+    margin-bottom: 25px;
   }
 }
