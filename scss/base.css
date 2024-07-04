@@ -128,7 +128,7 @@
   padding-left: 53px;
 }
 
-.quotes .row [class*=col] {
+.quotes .row [class*="col"] {
   padding-left: 0;
   padding-right: 0;
 }
@@ -379,8 +379,7 @@
 }
 /* Footer  */
 .footer {
-  background-color: var(--background-color);
-  height: 249px;
+  background-color: #071629;
 }
 
 .footer .container {

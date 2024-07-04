@@ -11,9 +11,9 @@
 /* Header Section  */
 
 .courses-header {
-  background-image: url(images/pic_3.jpg);
   background-size: cover;
   background-position-y: -100px;
+  height: 22vh; /* Set height to 40% of viewport height */
 }
 
 .courses-header h1 {
@@ -22,7 +22,7 @@
 }
 
 .courses-header .hero {
-  margin-top: 37px;
+  margin-top: 10px;
   padding-bottom: 51px;
 }
 

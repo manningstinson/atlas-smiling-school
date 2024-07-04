@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atlas-Smiling</title>
     <!-- Custom and Font Styles  -->
-    <link rel="stylesheet" href="base.css" />
-    <link rel="stylesheet" href="fonts.css" />
-    <link rel="stylesheet" href="pricing.css" />
+    <link rel="stylesheet" href="dist/base.css" />
+    <link rel="stylesheet" href="dist/fonts.css" />
+    <link rel="stylesheet" href="dist/pricing.css" />
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <!-- Google Fonts -->
     <link
@@ -44,7 +44,10 @@
     />
   </head>
   <body class="body">
-    <header class="header pricing-header">
+    <header
+      class="header pricing-header"
+      style="background-image: url('assets/img/pricing-hero.jpg')"
+    >
       <div class="container">
         <nav class="navbar navbar-expand-sm navbar-dark pt-4 px-0">
           <button
@@ -64,12 +67,6 @@
             class="navbar-brand mx-auto d-flex flex-column flex-sm-row align-items-center mt-3"
             href="index.html"
           >
-            <img
-              src="assets/img/smile_off.png"
-              alt="navbar-logo"
-              width="37px"
-              class="mr-4 mb-3 mb-sm-0 mr-sm-3 img-fluid"
-            />
             <img
               src="assets/img/logo.svg"
               alt="navbar-logo-text"
@@ -100,11 +97,6 @@
           <h1 class="my-0">
             What is
             <figure class="d-inline-block ml-2 my-0">
-              <img
-                src="assets/img/smile_off.png"
-                alt="navbar-logo"
-                class="mr-1 img-fluid smile-fig"
-              />
               <img
                 src="assets/img/logo.svg"
                 alt="navbar-logo-text"
@@ -233,7 +225,7 @@
                 <div class="row mx-auto align-items-center">
                   <div class="col-12 col-sm-2 col-lg-2 offset-lg-1 text-center">
                     <img
-                      src="images/profile_5.jpg"
+                      src="assets/img/profile_5.jpg"
                       class="d-block align-self-center"
                       alt="Carousel Pic 1"
                     />
@@ -255,7 +247,7 @@
                 <div class="row mx-auto align-items-center">
                   <div class="col-12 col-sm-2 col-lg-2 offset-lg-1 text-center">
                     <img
-                      src="images/profile_5.jpg"
+                      src="assets/img/profile_5.jpg"
                       class="d-block align-self-center"
                       alt="Carousel Pic 1"
                     />
@@ -277,7 +269,7 @@
                 <div class="row mx-auto align-items-center">
                   <div class="col-12 col-sm-2 col-lg-2 offset-lg-1 text-center">
                     <img
-                      src="images/profile_5.jpg"
+                      src="assets/img/profile_5.jpg"
                       class="d-block align-self-center"
                       alt="Carousel Pic 1"
                     />
@@ -303,7 +295,7 @@
               data-slide="prev"
             >
               <img
-                src="images/arrow_white_left.png"
+                src="assets/img/arrow_white_left.png"
                 alt="Quote Previous"
                 aria-hidden="true"
               />
@@ -316,7 +308,7 @@
               data-slide="next"
             >
               <img
-                src="images/arrow_white_right.png"
+                src="assets/img/arrow_white_right.png"
                 alt="Quote Next"
                 aria-hidden="true"
               />
@@ -405,15 +397,8 @@
           <div
             class="col footer-item d-flex justify-content-center justify-content-sm-start"
           >
-            <div class="footer-logo">
               <img
-                src="images/smile_off.png"
-                alt="navbar-logo"
-                width="37px"
-                class="mr-4 mb-3 mb-sm-0 mr-sm-3 img-fluid"
-              />
-              <img
-                src="images/logo.png"
+                src="assets/img/logo.svg"
                 alt="navbar-logo-text"
                 width="114px"
                 class="mr-4 img-fluid"
@@ -431,33 +416,48 @@
             class="col d-flex align-items-center align-items-sm-end justify-content-center justify-content-sm-end footer-item"
           >
             <div class="social">
-              <ul class="social nav">
-                <li class="social-item facebook-icon">
-                  <a
-                    href="https://www.facebook.com/HolbertonSchool/"
-                    class="social-link"
-                    aria-label="Facebook"
-                    ><span class="holberton_school-icon-ic_facebook"></span
-                  ></a>
-                </li>
-                <li class="social-item twitter-icon">
-                  <a
-                    href="https://twitter.com/holbertonschool"
-                    class="social-link"
-                    aria-label="Twitter"
-                    ><span class="holberton_school-icon-ic_twitter"></span
-                  ></a>
-                </li>
-                <li class="social-item instagram-icon">
-                  <a
-                    href="https://www.instagram.com/holbertonschool/"
-                    class="social-link"
-                    aria-label="Instagram"
-                    ><span class="holberton_school-icon-ic_instagram"></span
-                  ></a>
-                </li>
-              </ul>
-            </div>
+  <ul class="social nav">
+    <li class="social-item facebook-icon">
+      <a
+        href="https://www.facebook.com/HolbertonSchool/"
+        class="social-link"
+        aria-label="Facebook"
+      >
+        <img
+          src="assets/img/facebook.svg"
+          alt="Facebook"
+          style="width: 24px; height: 24px;"
+        />
+      </a>
+    </li>
+    <li class="social-item twitter-icon">
+      <a
+        href="https://twitter.com/holbertonschool"
+        class="social-link"
+        aria-label="Twitter"
+      >
+        <img
+          src="assets/img/twitter.svg"
+          alt="Twitter"
+          style="width: 24px; height: 24px;"
+        />
+      </a>
+    </li>
+    <li class="social-item instagram-icon">
+      <a
+        href="https://www.instagram.com/holbertonschool/"
+        class="social-link"
+        aria-label="Instagram"
+      >
+        <img
+          src="assets/img/instagram.svg"
+          alt="Instagram"
+          style="width: 24px; height: 24px;"
+        />
+      </a>
+    </li>
+  </ul>
+</div>
           </div>
         </div>
       </div>
