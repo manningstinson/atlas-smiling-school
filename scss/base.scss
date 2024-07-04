@@ -39,7 +39,7 @@
 }
 
 .hero {
-  margin-top: 75px;
+  margin-top: 155px;
 }
 
 .hero h1 {
@@ -379,8 +379,9 @@
 }
 /* Footer  */
 .footer {
-  background-color: var(--background-color);
-  height: 249px;
+  background-color: #071629;
+  padding: 20px 0;
+  color: var(--color-white);
 }
 
 .footer .container {
@@ -393,6 +394,7 @@
 
 .footer .footer-item {
   padding: 0;
+  margin-bottom: 15px;
 }
 
 .footer .social-item {
@@ -404,12 +406,21 @@
   text-decoration: none;
 }
 
-.footer .twitter-icon {
-  padding: 0 20px;
+.footer .social {
+  display: flex;
+}
+
+.footer .social .social-item {
+  margin: 0 10px;
+}
+
+.footer .social .social-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .footer .trademark {
-  padding-bottom: 39px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 991px) {
@@ -418,14 +429,17 @@
     padding-right: 40px;
   }
 }
+
 @media screen and (max-width: 576px) {
   .footer {
     height: auto;
+    text-align: center;
   }
   .footer .row {
     height: auto;
   }
   .footer .trademark {
+    margin-top: 15px;
     padding-bottom: 0;
   }
   .footer .row {
@@ -437,7 +451,6 @@
   }
   .footer .social {
     padding: 45px 0;
+    justify-content: center;
   }
 }
-
-/*# sourceMappingURL=base.css.map */
