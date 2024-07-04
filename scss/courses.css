@@ -35,42 +35,38 @@
 .search {
   background-color: var(--main-color);
   height: auto;
+  padding: 20px; /* Added padding for better spacing */
 }
 
 .search .input-group {
   height: 48px;
-  border: 0px;
+  border: 0;
 }
 
 .search .input-group-prepend {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .search .input-group-text {
   background-color: var(--color-white);
-  border-right: 0;
-  padding-right: 10px;
-  border-style: none;
-  border-radius: 3px 3px 0px 0px;
+  border: none;
+  padding: 0 10px;
+  border-radius: 3px 3px 0 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.25);
   color: var(--color-white);
   font-size: 20px;
   display: flex;
   align-items: center; /* Ensure icon is vertically centered */
-  height: 48px; /* Explicitly set height */
-  line-height: 48px; /* Align icon vertically */
 }
 
 .search .form-control.search-text-area {
-  height: 100%;
-  border-style: none;
-  border-radius: 3px 3px 0px 0px;
+  border: none;
+  border-radius: 3px 3px 0 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.25);
-  mix-blend-mode: normal;
-  border-left: 0;
   color: var(--color-white);
+  height: 48px;
 }
 
 .search .form-control.search-text-area::placeholder {
@@ -94,10 +90,9 @@
 
 .search .dropdown .btn {
   width: 100%;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.25);
-  mix-blend-mode: normal;
 }
 
 .search .dropdown .btn span {
@@ -113,8 +108,7 @@
   position: absolute;
 }
 
-.search .btn.focus,
-.btn:focus {
+.search .btn:focus {
   box-shadow: none !important;
 }
 
@@ -125,6 +119,11 @@
 .search .dropdown-menu .dropdown-item:hover {
   color: var(--main-color);
   background-color: white;
+}
+
+.input-group-pre.input-group-prepend {
+  margin-right: -1px;
+  height: 0 !important;
 }
 
 @media screen and (max-width: 575px) {
