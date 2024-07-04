@@ -1,4 +1,4 @@
-/* Pricing Styles  */
+/* Pricing Styles */
 
 .pricing-header .navbar-nav li:nth-child(2) a {
   color: var(--main-color) !important;
@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-/* HEADER SECTION */
+/* Header Section */
 
 .pricing-header {
   background-image: url(images/pic_2.jpg);
@@ -33,21 +33,7 @@
   width: 200px;
 }
 
-@media screen and (max-width: 575px) {
-  .pricing-header h1 {
-    font-size: 24px;
-  }
-
-  .pricing-header .hero .smile-fig {
-    max-width: 30px;
-  }
-
-  .pricing-header .title-fig {
-    width: 150px;
-  }
-}
-
-/* PRICING GRID  */
+/* Pricing Grid */
 
 .prices-grid {
   padding-bottom: 38px;
@@ -97,6 +83,58 @@
   vertical-align: middle;
 }
 
+/* FAQ Section */
+
+.faq.section {
+  padding: 60px 0;
+}
+
+.faq .section-header {
+  margin-bottom: 40px;
+}
+
+.faq .section-body .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.faq .question {
+  background-color: #fff; /* Background color for the question boxes */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow for better visual */
+}
+
+.faq .question h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.faq .question p {
+  font-size: 1rem;
+  color: #6c757d; /* Text color for the content */
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+
+/* Pricing Header */
+@media screen and (max-width: 575px) {
+  .pricing-header h1 {
+    font-size: 24px;
+  }
+
+  .pricing-header .hero .smile-fig {
+    max-width: 30px;
+  }
+
+  .pricing-header .title-fig {
+    width: 150px;
+  }
+}
+
+/* Pricing Grid */
 @media screen and (min-width: 576px) {
   .prices-grid .table .prices-col-3 {
     padding-left: 30px;
@@ -132,42 +170,7 @@
   }
 }
 
-/* FAQ SECTION */
-
-.faq.section {
-  padding: 60px 0;
-}
-
-.faq .section-header {
-  margin-bottom: 40px;
-}
-
-.faq .section-body .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.faq .question {
-  background-color: #fff; /* Background color for the question boxes */
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow for better visual */
-}
-
-.faq .question h3 {
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-}
-
-.faq .question p {
-  font-size: 1rem;
-  color: #6c757d; /* Text color for the content */
-  margin-bottom: 0;
-}
-
-/* Media Queries for Responsive Design */
-
+/* FAQ Section */
 @media (max-width: 767.98px) {
   .faq .question {
     margin-bottom: 20px;
