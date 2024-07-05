@@ -38,6 +38,49 @@
   opacity: var(--opacity-value);
 }
 
+/* Add underline to the nav-link */
+.navbar-nav .nav-link {
+  position: relative;
+  display: inline-block;
+  color: var(--color-white);
+  padding-bottom: 5px; /* Add some padding to the bottom */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover:after,
+.navbar-nav .nav-link.active:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--main-color);
+}
+
+/* Navigation Menu */
+.navbar-nav .nav-link {
+  font-size: 14px; /* Adjust the size as needed */
+}
+
+/* Increase the size of the logo */
+.navbar-brand img {
+  width: 150px; /* Increase the size as needed */
+}
+
 /* Hero Section */
 .hero {
   margin-top: 75px;
@@ -175,7 +218,7 @@
 .section .card-title {
   font-size: 16px;
   line-height: 20px;
-  color: var(--background-color);
+  color: var (--background-color);
 }
 
 .section .card-text {
@@ -274,16 +317,6 @@
 
 .footer .trademark {
   font-size: 14px;
-}
-
-/* Navigation Menu */
-.navbar-nav .nav-link {
-  font-size: 14px; /* Adjust the size as needed */
-}
-
-/* Increase the size of the logo */
-.navbar-brand img {
-  width: 150px; /* Increase the size as needed */
 }
 
 /* Responsive Styles */
@@ -437,6 +470,8 @@
   .row .smile4 {
     padding-right: var(--smile-padding);
   }
+
+
 }
 
 @media screen and (max-width: 576px) {
