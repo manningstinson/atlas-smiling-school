@@ -11,7 +11,6 @@
 .courses-header {
   background-size: cover;
   background-position-y: -100px;
-  height: 22vh; /* Set height to 40% of viewport height */
 }
 
 .courses-header h1 {
@@ -25,11 +24,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .courses-header {
-    background-position-y: 0;
-    background-size: initial;
-    background-position-y: -100px;
-  }
 }
 
 /* Search Section */
@@ -167,6 +161,12 @@
   .results .rating + span {
     display: block;
     padding-top: 30px;
+  }
+
+  .courses-header {
+    background-size: cover;
+    background-position-y: -100px;
+    height: 0vh; /* Set height to 40% of viewport height */
   }
 }
 
